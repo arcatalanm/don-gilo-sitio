@@ -1,16 +1,10 @@
-# React + Vite
+# Ferretería & Construcción Don Gilo - Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web informativo para la **Ferretería & Construcción Don Gilo** comercio local ubicado en Quinahue El Boldal en la comuna de Santa Cruz. El objetivo del sitio es orientar a vecinos, maestros y clientes antes de acudir a la tienda, dando a conocer las líneas de productos disponibles en el local (materiales de construcción, herramientas básicas, artículos para el hogar, entre otros), informar sobre el servicio de fletes y despacho de materiales y facilitar los horarios de atención junto con un canal directo de WhatsApp para resolver dudas y coordinar cotizaciones.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **React + Vite**
+* **Bootstrap 5** (Responsividad & Framework)
+* **Bootstrap Icons**
+* **CSS nativo** (`src/index.css`)
