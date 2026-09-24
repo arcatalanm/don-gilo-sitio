@@ -1,19 +1,20 @@
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm py-2">
-            <div className="container">
+        <nav className="navbar-main navbar navbar-expand-lg border-bottom shadow-sm py-2 sticky-top">
+            <div className="navbar-container container">
                 {/* Logo */}
-                <a className="navbar-brand py-0" href="/">
+                <a className="navbar-brand-link navbar-brand py-0" href="/">
                     <img 
-                        src="logo_don_gilo.svg" 
+                        src="don_gilo.svg" 
                         alt="Ferretería Don Gilo" 
                         height="125"
+                        className="navbar-logo-img img-fluid"
                     />
                 </a>
 
                 {/* Botón responsive para móviles */}
                 <button 
-                    className="navbar-toggler" 
+                    className="navbar-toggler-btn navbar-toggler" 
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target="#navbarNav" 
@@ -21,41 +22,41 @@ function Navbar() {
                     aria-expanded="false" 
                     aria-label="Abrir navegación"
                 >
-                    <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon-custom navbar-toggler-icon"></span>
                 </button>
 
                 {/* Enlaces */}
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-                        <li className="nav-item">
-                            <a className="nav-link fw-semibold text-dark" href="#inicio">
+                <div className="navbar-collapse-container collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav-list navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                        <li className="navbar-nav-item nav-item">
+                            <a className="navbar-nav-link nav-link fw-semibold" href="#inicio">
                                 Inicio
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link fw-semibold text-dark" href="#catalogo">
+                        <li className="navbar-nav-item nav-item">
+                            <a className="navbar-nav-link nav-link fw-semibold" href="#catalogo">
                                 Catálogo
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link fw-semibold text-dark" href="#marcas">
+                        <li className="navbar-nav-item nav-item">
+                            <a className="navbar-nav-link nav-link fw-semibold" href="#marcas">
                                 Marcas
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link fw-semibold text-dark" href="#despacho">
+                        <li className="navbar-nav-item nav-item">
+                            <a className="navbar-nav-link nav-link fw-semibold" href="#despacho">
                                 Despachos
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link fw-semibold text-dark" href="#ubicacion">
+                        <li className="navbar-nav-item nav-item">
+                            <a className="navbar-nav-link nav-link fw-semibold" href="#ubicacion">
                                 Sucursal
                             </a>
                         </li>
 
                         {/* Cotizacion */}
-                        <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
-                            <a className="btn btn-outline-dark px-3 py-2 fw-bold" href="#cotizar">
+                        <li className="navbar-nav-item-action nav-item ms-lg-2 mt-2 mt-lg-0">
+                            <a className="navbar-btn-cotizar btn px-3 py-2 fw-bold" href="#cotizar">
                                 Solicitar Cotización
                             </a>
                         </li>
