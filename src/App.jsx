@@ -1,25 +1,27 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import './index.css'
-import TopBar from './components/layout/TopBar'
-import Navbar from './components/layout/NavBar'
+import './index.css';
+import TopBar from './components/layout/TopBar';
+import Navbar from './components/layout/NavBar';
+import Hero from './components/sections/Hero';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
-    <>
-    {/* Header */}
-    <header>
-      <TopBar/>
-      <Navbar/>
-    </header>
+    <div className="app-layout d-flex flex-column min-vh-100">
+      {/* Header */}
+      <header className="app-header header-wrapper">
+        <TopBar />
+        <Navbar />
+      </header>
 
-    {/* Main */}
-    <main>
+      {/* Main */}
+      <main className="app-main main-content flex-grow-1" id="inicio">
+        <Hero />
+      </main>
 
-    </main>
-    </>
-  )
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
