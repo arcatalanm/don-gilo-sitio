@@ -10,8 +10,7 @@
 *::before,
 *::after {
   font-family: sans-serif;
-  transition: none;
-  animation: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -156,6 +155,63 @@ h1, h2, h3, h4, h5, h6, .display-5, .display-6 {
   background-color: var(--dg-amarillo);
   border-color: #0f2137;
   opacity: 1;
+}
+
+/* Botón Base */
+.btn-dg {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  padding: 14px 26px 14px 72px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.25s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+/* Efecto */
+.btn-dg:active {
+  transform: translateY(2px);
+}
+
+/* Botón Azul*/
+.btn-dg-marino {
+  background-color: var(--dg-hero-bg);
+  color: #ffffff;
+}
+
+.btn-dg-marino:hover {
+  background-color: var(--dg-hero-bg-dark);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 33, 55, 0.3);
+}
+
+.btn-dg-marino:hover .btn-dg-icon {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Boton Verde */
+.btn-dg-verde {
+  background-color: #25d366;
+  color: #ffffff;
+}
+
+.btn-dg-verde:hover {
+  background-color: #1ebc59;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.btn-dg-verde:hover .btn-dg-icon {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .hero-carousel-prev .carousel-control-prev-icon,
