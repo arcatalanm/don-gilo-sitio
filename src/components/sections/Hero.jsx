@@ -1,25 +1,36 @@
 import { useState, useEffect } from 'react';
 
+const WHATSAPP_NUM = '56993456575';
+
 const SLIDES = [
   {
     id: 1,
-    title: 'Todo para tu obra, ampliación y herramientas en un solo lugar',
-    description: 'Materiales para construcción gruesa, terminaciones y ferretería general. Llevamos tus compras con flete directo a parcelas y sectores rurales de Santa Cruz.',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80',
+    title: 'Tu obra, ampliación y reparaciones desde los cimientos.',
+    description: 'Cemento, maderas, fierros, fijaciones y herramientas con atención personalizada en Quinahue.',
+    image: '../src/assets/images/ferreteria-1.jpg',
+    boton: 'Ver Catálogo',
+    // Si tienes una sección con id="catalogo", hace scroll hacia ella:
+    ruta: '#catalogo',
     alt: 'Materiales de Construcción en Ferretería Don Gilo'
   },
   {
     id: 2,
     title: 'Servicio de Fletes y Despacho a Terreno',
-    description: 'Llevamos tu carga pesada y materiales directo a parcelas, obras y caminos rurales en Quinahue El Boldal y alrededores de Santa Cruz.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1400&q=80',
+    description: 'Despacho rápido de maderas, cemento y materiales a caminos rurales de Quinahue El Boldal y alrededores.',
+    image: '../src/assets/images/ferreteria-2.jpg',
+    boton: 'Consultar Cobertura y Flete',
+    // WhatsApp directo con mensaje específico de fletes:
+    ruta: `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent('Hola Don Gilo, quisiera consultar por fletes y cobertura a mi sector.')}`,
     alt: 'Servicio de Fletes y Despacho Don Gilo'
   },
   {
     id: 3,
     title: 'Visítanos en Quinahue El Boldal',
-    description: 'Encuéntranos frente a la población San Jorge en la comuna de Santa Cruz. Atención cercana y asesoría para tus proyectos y compras.',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1400&q=80',
+    description: 'Encuéntranos en plena ruta principal de Quinahue. Te ayudamos a calcular tus materiales y elegir las herramientas correctas.',
+    image: '../src/assets/images/ferreteria-3.jpg',
+    boton: 'Abrir Ubicación en el Mapa',
+    // Enlace de Google Maps directo:
+    ruta: 'https://maps.app.goo.gl/vmbk2e8LxheKDSaw8',
     alt: 'Local de Ferretería Don Gilo en Santa Cruz'
   }
 ];
@@ -30,7 +41,7 @@ function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % SLIDES.length);
-    }, 7000);
+    }, 15000);
 
     return () => clearInterval(timer);
   }, [activeSlide]);
@@ -48,13 +59,16 @@ function Hero() {
   };
 
   const current = SLIDES[activeSlide];
+  
+  // Detecta si es un enlace web externo (WhatsApp o Maps)
+  const esExterno = current.ruta.startsWith('http');
 
   return (
     <section className="hero-section py-5">
       <div className="hero-container container">
         <div className="hero-row row align-items-center gy-4">
 
-          {/* Columna Izquierda: Información sincronizada con el carrusel */}
+          {/* Left: Información */}
           <div className="hero-content-col col-lg-6 text-center text-lg-start">
             <h1 className="hero-title display-5 fw-bold mb-3">
               {current.title}
@@ -64,10 +78,21 @@ function Hero() {
               {current.description}
             </p>
 
-
+            <div>
+              {/* Buttom */}
+              <a 
+                href={current.ruta}
+                target={esExterno ? '_blank' : '_self'}
+                rel={esExterno ? 'noopener noreferrer' : undefined}
+                className="btn-dg-marino btn-lg fw-bold px-4 py-3 shadow-sm text-decoration-none hero-button"
+                
+              >
+                {current.boton}
+              </a>
+            </div>
           </div>
 
-          {/* Columna Derecha: Carrusel sincronizado */}
+          {/* Right: Carrusel */}
           <div className="hero-carousel-col col-lg-6">
             <div className="hero-carousel-wrapper shadow-sm rounded-3 overflow-hidden">
               <div className="carousel slide">
@@ -86,7 +111,7 @@ function Hero() {
                   ))}
                 </div>
 
-                {/* Slides de imágenes */}
+                {/* Imagenes */}
                 <div className="carousel-inner hero-carousel-inner">
                   {SLIDES.map((slide, index) => (
                     <div 
@@ -102,7 +127,7 @@ function Hero() {
                   ))}
                 </div>
 
-                {/* Controles Anterior / Siguiente */}
+                {/* Prev | Next */}
                 <button 
                   className="carousel-control-prev hero-carousel-prev" 
                   type="button" 
