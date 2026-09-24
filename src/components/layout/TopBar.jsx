@@ -7,12 +7,14 @@ function TopBar() {
                     <div className="topbar-info-col col-md-7 d-flex align-items-center gap-4">
                         <span className="topbar-schedule-item d-flex align-items-center text-white">
                             <i className="topbar-schedule-icon bi bi-clock me-1"></i>
-                            Lun - Sáb: 8:30 a 13:00 / 14:30 a 19:30 hrs | Dom: 8:30 a 13:00 hrs
+                            Lun - Sáb: 08:30 a 13:00 / 14:30 a 19:30 hrs | Dom: 08:30 a 13:00 hrs
                         </span>
-                        <span className="topbar-location-item d-flex align-items-center text-white">
-                            <i className="topbar-location-icon bi bi-geo-alt me-1"></i>
-                            el boldal - Quinahue, 3130000 Santa Cruz, O'Higgins
-                        </span>
+                        <a href="https://maps.app.goo.gl/38pmAowZkWrkoRe69" target="_blank" className="text-decoration-none">
+                            <span className="topbar-location-item d-flex align-items-center text-white">
+                                <i className="topbar-location-icon bi bi-geo-alt me-1"></i>
+                                el boldal - Quinahue, 3130000 Santa Cruz, O'Higgins
+                            </span>
+                        </a>
                     </div>
 
                     {/* Right: Contacto directo y Redes */}
