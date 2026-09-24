@@ -39,11 +39,6 @@ function Navbar() {
                             </a>
                         </li>
                         <li className="navbar-nav-item nav-item">
-                            <a className="navbar-nav-link nav-link fw-semibold" href="#marcas">
-                                Marcas
-                            </a>
-                        </li>
-                        <li className="navbar-nav-item nav-item">
                             <a className="navbar-nav-link nav-link fw-semibold" href="#despacho">
                                 Despachos
                             </a>
