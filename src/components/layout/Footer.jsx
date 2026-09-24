@@ -82,7 +82,7 @@ function Footer() {
             </h6>
             <div className="footer-schedule-item text-white small mb-2 d-flex align-items-center gap-2">
               <i className="footer-schedule-icon bi bi-clock text-white"></i>
-              <span><strong>Lunes a Sábado:</strong><br />08:30 a 19:30 hrs</span>
+              <span><strong>Lunes a Sábado:</strong><br />08:30 a 13:00 / 14:30 a 19:30 hrs</span>
             </div>
             <div className="footer-schedule-item text-white small mb-2 d-flex align-items-center gap-2">
               <i className="footer-schedule-icon bi bi-calendar-event text-white"></i>
