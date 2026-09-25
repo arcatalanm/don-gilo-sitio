@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react';
+import foto1 from '../../assets/images/ferreteria-1.jpg';
+import foto2 from '../../assets/images/ferreteria-2.jpg';
+import foto3 from '../../assets/images/ferreteria-3.jpg';
+
 
 const WHATSAPP_NUM = '56993456575';
 
@@ -7,7 +11,7 @@ const SLIDES = [
     id: 1,
     title: 'Tu obra, ampliación y reparaciones desde los cimientos.',
     description: 'Cemento, maderas, fierros, fijaciones y herramientas con atención personalizada en Quinahue.',
-    image: '../src/assets/images/ferreteria-1.jpg',
+    image: foto1,
     boton: 'Ver Catálogo',
     // Si tienes una sección con id="catalogo", hace scroll hacia ella:
     ruta: '#catalogo',
@@ -17,7 +21,7 @@ const SLIDES = [
     id: 2,
     title: 'Servicio de Fletes y Despacho a Terreno',
     description: 'Despacho rápido de maderas, cemento y materiales a caminos rurales de Quinahue El Boldal y alrededores.',
-    image: '../src/assets/images/ferreteria-2.jpg',
+    image: foto2,
     boton: 'Consultar Cobertura y Flete',
     // WhatsApp directo con mensaje específico de fletes:
     ruta: `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent('Hola Don Gilo, quisiera consultar por fletes y cobertura a mi sector.')}`,
@@ -27,7 +31,7 @@ const SLIDES = [
     id: 3,
     title: 'Visítanos en Quinahue El Boldal',
     description: 'Encuéntranos en plena ruta principal de Quinahue. Te ayudamos a calcular tus materiales y elegir las herramientas correctas.',
-    image: '../src/assets/images/ferreteria-3.jpg',
+    image: foto3,
     boton: 'Abrir Ubicación en el Mapa',
     // Enlace de Google Maps directo:
     ruta: 'https://maps.app.goo.gl/vmbk2e8LxheKDSaw8',
