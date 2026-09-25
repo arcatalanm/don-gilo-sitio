@@ -72,7 +72,18 @@ h1, h2, h3, h4, h5, h6, .display-5, .display-6 {
   background-color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
   box-shadow: 0 4px 15px rgba(15, 33, 55, 0.08);
+  transition: transform 0.25s ease-in-out;
   z-index: 1030;
+}
+
+/* visible -> pos normal */
+.nav-visible {
+  transform: translateY(0);
+}
+
+/* hidden -> desplaze -100y */
+.nav-hidden {
+  transform: translateY(-100%);
 }
 
 .navbar-logo-img {

@@ -11,8 +11,9 @@ function App() {
       {/* Header */}
       <header className="app-header header-wrapper">
         <TopBar />
-        <Navbar />
       </header>
+
+      <Navbar />
 
       {/* Main */}
       <main className="app-main main-content flex-grow-1" id="inicio">
