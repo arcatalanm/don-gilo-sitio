@@ -176,9 +176,6 @@ h1, h2, h3, h4, h5, h6, .display-5, .display-6 {
   justify-content: center;
   border: none;
   cursor: pointer;
-  padding: 14px 26px 14px 72px;
-  font-size: 0.95rem;
-  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-decoration: none;
@@ -322,12 +319,62 @@ h1, h2, h3, h4, h5, h6, .display-5, .display-6 {
   line-height: 1;
 }
 
+/* Sección Servicios */
+.servicios-section {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.servicios-main-title {
+  color: var(--dg-hero-bg);
+}
+
+.servicios-main-subtitle {
+  color: #64748b;
+}
+
+.servicios-title-divider {
+  width: 60px;
+  height: 4px;
+  background-color: var(--dg-amarillo);
+  border-radius: 2px;
+}
+
+.servicios-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.servicios-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px rgba(15, 33, 55, 0.12) !important;
+}
+
+/* Iconos de la sección Servicios */
+.servicios-icon-box {
+  width: 52px;
+  height: 52px;
+  background-color: var(--dg-gris-fondo);
+  color: var(--dg-hero-bg);
+  border: 1px solid #e2e8f0;
+}
+
+.servicios-card-title {
+  color: #1e293b;
+}
+
+.servicios-text {
+  color: #475569;
+}
+
+.servicios-list {
+  color: #475569;
+}
+
 @media (max-width: 991.98px) {
   .servicios-image-col {
     min-height: 250px;
   }
 }
-
-
-
 
