@@ -35,9 +35,9 @@ function TopBar() {
                             href="https://wa.me/56993456575" 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="topbar-whatsapp-link text-decoration-none text-success fw-semibold d-flex align-items-center"
+                            className="topbar-whatsapp-link text-decoration-none fw-semibold d-flex align-items-center"
                         >
-                            <i className="topbar-whatsapp-icon bi bi-whatsapp me-1"></i>
+                            <i className="bi bi-whatsapp me-1"></i>
                             WhatsApp
                         </a>
 
