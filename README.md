@@ -8,3 +8,5 @@ Sitio web informativo para la **Ferretería & Construcción Don Gilo** comercio 
 * **Bootstrap 5** (Responsividad & Framework)
 * **Bootstrap Icons**
 * **CSS nativo** (`src/index.css`)
+
+![Logo don gilo](/public/don_gilo.svg)
